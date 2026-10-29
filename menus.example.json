@@ -1,0 +1,69 @@
+{
+    "title": "My Menus",
+    "entries": [
+        {
+            "title": "Open Terminal",
+            "subtitle": "Launch kitty",
+            "type": "command",
+            "command": "kitty &"
+        },
+        {
+            "title": "System",
+            "subtitle": "Power and session actions",
+            "type": "submenu",
+            "menuTitle": "System",
+            "entries": [
+                {
+                    "title": "Lock Screen",
+                    "type": "command",
+                    "command": "hyprlock"
+                },
+                {
+                    "title": "Suspend",
+                    "type": "command",
+                    "command": "systemctl suspend"
+                },
+                {
+                    "title": "Reboot",
+                    "type": "command",
+                    "command": "systemctl reboot"
+                },
+                {
+                    "title": "Shutdown",
+                    "type": "command",
+                    "command": "systemctl poweroff"
+                }
+            ]
+        },
+        {
+            "title": "Dev Tools",
+            "subtitle": "Common dev shortcuts",
+            "type": "submenu",
+            "menuTitle": "Dev Tools",
+            "entries": [
+                {
+                    "title": "Open Neovim",
+                    "type": "command",
+                    "command": "kitty nvim &"
+                },
+                {
+                    "title": "Git Status",
+                    "subtitle": "In current dir",
+                    "type": "command",
+                    "command": "kitty -e git status &"
+                }
+            ]
+        },
+        {
+            "title": "Night Mode",
+            "subtitle": "Redshift",
+            "type": "command",
+            "togglable": true,
+            "stateCommand": "pgrep -x redshift",
+            "titleOn": "Disable Night Mode",
+            "titleOff": "Enable Night Mode",
+            "command": "pkill redshift || redshift -O 3500 &",
+            "icon": "moon"
+        }
+    ]
+}

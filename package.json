@@ -1,0 +1,42 @@
+{
+    "name": "custom-menus",
+    "title": "Custom Menus",
+    "description": "User-defined menus with shell command entries and submenus, managed by a JSON config file.",
+    "categories": [
+        "Other"
+    ],
+    "license": "MIT",
+    "author": "abdulk-id",
+    "contributors": [],
+    "pastContributors": [],
+    "icon": "extension_icon.webp",
+    "commands": [
+        {
+            "name": "open-menu",
+            "title": "Open Custom Menu",
+            "description": "Open the root menu defined in your menus.json config file.",
+            "mode": "view",
+            "preferences": [
+                {
+                    "name": "config-path",
+                    "title": "Config File Path",
+                    "description": "Absolute path to your menus.json config file.",
+                    "required": true,
+                    "type": "textfield",
+                    "default": "~/.config/vicinae/menus.json"
+                }
+            ]
+        }
+    ],
+    "preferences": [],
+    "scripts": {
+        "build": "vici build",
+        "dev": "vici develop"
+    },
+    "dependencies": {
+        "@vicinae/api": "0.21.0"
+    },
+    "devDependencies": {
+        "typescript": "6.0.3"
+    }
+}
